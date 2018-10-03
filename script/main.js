@@ -4,7 +4,7 @@ var form = document.querySelector('#select');
 var button = document.querySelector('.bouton');
 
 // Chargement des données et création des divisions (fetch + appel de fonctions)
-fetch('http://api.citybik.es/v2/networks/bicloo').then(function(res) {
+fetch('https://api.citybik.es/v2/networks/bicloo').then(function(res) {
 	return res.json().then(function(data) {
 
 		for (var i=0 ; i<data.network.stations.length ; i++){
