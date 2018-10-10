@@ -1,30 +1,82 @@
-.nav{
-  margin : 0;
+*{
+  margin: 0;
   padding: 0;
-  height: 80px;
-  list-style-type: none;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-  align-items: center;
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-family: 'Raleway', bold;
-  /* margin-block-start : 1em;
-  margin-block-end : 1em;
-  padding-inline-start: 40px; */
-  box-shadow: 0px 4px 10px 0px rgba(119, 119, 119, 0.30);
--moz-box-shadow: 0px 4px 10px 0px rgba(119, 119, 119, 0.30);
--webkit-box-shadow: 0px 4px 10px 0px rgba(119, 119, 119, 0.30);
+  font-family: 'Raleway';
 }
 
-ul{
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style-type: none;
-  text-transform: lowercase;
+body{
+  height: 200vh;
+  position: relative;
+  overflow-x : hidden; /* cache le surplus à droite*/
+}
 
+header{
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+}
+  #nav{
+    margin : 0;
+    padding: 0;
+    min-width: 100%;
+    height: 80px;
+    list-style-type: none;
+  	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+  	justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Raleway', bold;
+    box-shadow: 0px 4px 10px 0px rgba(119, 119, 119, 0.30);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(119, 119, 119, 0.30);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(119, 119, 119, 0.30);
+  }
+
+.scrolled{
+  position: fixed;
+  width: 100%;
+}
+
+.scrolled .logo{
+  display: none;
+}
+
+#what{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 90vh;
+  transform: translateX(100vw);
+  transition: transform 700ms;  /*On transition en 700 miliseconde*/
+}
+
+#nav2{
+  width: 40vh;
+  display : flex;
+  flex-direction : column;
+  justify-content : space-around;
+  align-items : center;
+  box-shadow: 0px 0px 0px 4px rgba(119, 119, 119, 0.30);
+-moz-box-shadow: 0px 0px 0px 4px rgba(119, 119, 119, 0.30);
+-webkit-box-shadow: 0px 0px 10px 1px rgba(119, 119, 119, 0.30);
+ }
+
+ #what.visible{
+  transform: translateX(0vw);
+  transition: transform 700ms;
+
+}
+
+.burger{
+  width: 30px;
+  height: 30px;
+  max-width : 100%;
+  max-height : 100%;
+  z-index: 1;
+  background-image: url(../assets/menu.png);
+  background-size: cover;
 }
 
 .ou{
@@ -43,13 +95,11 @@ ul{
 }
 
 .info{
-  font-family: 'Raleway';
   font-size: 0.8em;
   text-align: center;
 }
 
 .voila{
-  font-family: 'Raleway';
   font-size: 1em;
   text-align: center;
   padding-top: 5%;
@@ -57,8 +107,7 @@ ul{
 }
 
 h1{
-  padding-top: 10%;
-  font-family: 'Raleway';
+  padding-bottom: 5%;
   font-size: 2em;
   text-align: center;
 }
@@ -74,4 +123,12 @@ select{
 
 em{
   color: red;
+}
+
+.coucou{
+  /* position: absolute; */
+display: flex;
+justify-content: center;
+flex-direction: column;
+height: 100vh;
 }

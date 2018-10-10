@@ -32,7 +32,27 @@ fetch('https://api.citybik.es/v2/networks/bicloo').then(function(res) {
 		//   var oSelect = document.getElementById("select");
 		//   console.log(oSelect.selectedIndex);
 		// }
-
+// ça c'est ton test qui n'a pas fonctionné, tu sais celui pour se passer de ton affreux bouton...
 	});
 
+});
+
+var threshold = 200;
+// treshold = seuil / Prononciation = trèsheuld
+var header = document.querySelector('#header');
+window.addEventListener('scroll', function(event){
+	if (window.scrollY > threshold){
+		header.classList.add('scrolled');
+	}else{
+		header.classList.remove('scrolled');
+	};
+});
+
+
+//afficher mon burgermenu
+var manav = document.querySelector('#what');
+var monburger = document.querySelector('.burger');
+monburger.addEventListener('click', function(event){
+	manav.classList.toggle('visible');
+	console.log("connard");
 });
