@@ -54,5 +54,5 @@ var manav = document.querySelector('#what');
 var monburger = document.querySelector('.burger');
 monburger.addEventListener('click', function(event){
 	manav.classList.toggle('visible');
-	console.log("connard");
+	console.log("autre");
 });
